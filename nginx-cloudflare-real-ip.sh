@@ -22,3 +22,7 @@ for cfip in $IPV6; do
 done
 
 echo 'real_ip_header CF-Connecting-IP;' >>/etc/nginx/conf.d/cloudflare.conf
+
+if [ -x /usr/sbin/ufw ]; then
+    ufw reload
+fi

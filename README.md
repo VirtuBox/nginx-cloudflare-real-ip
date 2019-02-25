@@ -1,11 +1,11 @@
 # nginx-cloudflare-real-ip
 
-Configure Nginx to restore Visitor real IP under Cloudflare CDN
+Configure Nginx to restore Visitors real IP under Cloudflare CDN
 
 ## Features
 
 * Get Cloudflare IPv4 + IPv6 list and create nginx configuration to restore visitors real IP in `/etc/nginx/conf.d/cloudflare.conf`
-* If UFW is installed, whitelist Cloudflare IPs on port 80 & 443
+* Whitelist Cloudflare IPs on port 80 & 443 with UFW (optional)
 
 ## Requirements
 
@@ -23,7 +23,14 @@ If the previous command return nothing, http_realip_module isn't available
 
 ## Usage
 
+Nginx configuration only
+
 ```bash
-bash <(wget -O - https://raw.githubusercontent.com/VirtuBox/nginx-cloudflare-real-ip/master/nginx-cloudflare-real-ip.sh)
+bash <(wget -O - virtubox.net/nginx-cloudflare || curl -sL virtubox.net/nginx-cloudflare)
 ```
 
+Nginx configuration + UFW configuration
+
+```bash
+bash <(wget -O - virtubox.net/nginx-cloudflare || curl -sL virtubox.net/nginx-cloudflare) --ufw
+```

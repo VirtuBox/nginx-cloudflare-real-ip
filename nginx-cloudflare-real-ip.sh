@@ -36,7 +36,7 @@ echo "####################################"
 echo "Adding Cloudflare IPv6"
 echo "####################################"
 for cf_ip6 in $CF_IPV6; do
-    echo "set_real_ip_from $cf_ip;" >>/etc/nginx/conf.d/cloudflare.conf
+    echo "set_real_ip_from $cf_ip6;" >>/etc/nginx/conf.d/cloudflare.conf
     if [ "$CF_UFW_SETUP" = "y" ]; then
         sudo ufw allow from $cf_ip6 to any port 80
         sudo ufw allow from $cf_ip6 to any port 443

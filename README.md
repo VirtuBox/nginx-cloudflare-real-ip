@@ -34,3 +34,5 @@ Nginx configuration + UFW configuration
 ```bash
 bash <(wget -O - virtubox.net/nginx-cloudflare || curl -sL virtubox.net/nginx-cloudflare) --ufw
 ```
+
+Published & maintained by [VirtuBox](https://virtubox.net)

@@ -26,13 +26,13 @@ If the previous command return nothing, http_realip_module isn't available
 Nginx configuration only
 
 ```bash
-bash <(wget -O - virtubox.net/nginx-cloudflare || curl -sL virtubox.net/nginx-cloudflare)
+bash <(wget -O - vtb.cx/nginx-cloudflare || curl -sL vtb.cx/nginx-cloudflare)
 ```
 
 Nginx configuration + UFW configuration
 
 ```bash
-bash <(wget -O - virtubox.net/nginx-cloudflare || curl -sL virtubox.net/nginx-cloudflare) --ufw
+bash <(wget -O - vtb.cx/nginx-cloudflare || curl -sL vtb.cx/nginx-cloudflare) --ufw
 ```
 
 Published & maintained by [VirtuBox](https://virtubox.net)
